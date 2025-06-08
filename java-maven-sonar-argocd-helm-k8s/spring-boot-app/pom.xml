@@ -24,7 +24,7 @@
     <java.version>11</java.version>
 
     <!-- Add this property with your actual SonarQube server URL -->
-    <sonar.host.url>http://34.201.116.83:9000</sonar.host.url>
+    <sonar.host.url>http://75.101.236.115:9000</sonar.host.url>
     </properties>
 
     <dependencies>
