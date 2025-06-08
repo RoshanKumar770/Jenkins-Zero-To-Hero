@@ -14,18 +14,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.2</version> <!-- Updated to latest stable -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.2.4.RELEASE</version>
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source> <!-- Updated for Java 17 -->
-        <maven.compiler.target>17</maven.compiler.target> <!-- Updated for Java 17 -->
-        <java.version>17</java.version> <!-- Updated for Java 17 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <java.version>11</java.version>
 
-        <!-- SonarQube server URL -->
-        <sonar.host.url>http://75.101.236.115:9000</sonar.host.url>
+    <!-- Add this property with your actual SonarQube server URL -->
+    <sonar.host.url>http://75.101.236.115:9000</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -65,23 +64,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- Updated to latest compiler plugin -->
+                <version>3.8.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>4.0.0.4121</version>
-                <configuration>
-                    <sonar.host.url>${sonar.host.url}</sonar.host.url>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
-
-</project>
